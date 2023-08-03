@@ -144,7 +144,8 @@ int main()//codigo principal
 		printf("Escolha a opção desejada:\n\n");
 		printf("\t1- Registrar nomes\n");
 		printf("\t2- Consultar nomes\n");
-		printf("\t3- Deletar nomes\n\n");
+		printf("\t3- Deletar nomes\n");
+		printf("\t4- Sair do sistema\n\n");
 		printf("Opcao: " ); //final do menu
 	
 		scanf("%d", &opcao); //armazenando a escolha do usuario
@@ -167,6 +168,11 @@ int main()//codigo principal
 			deletar();//chama a funcao deletar que esta fora do codigo principal
 			break;//para o loop de switchcase
 					
+			
+			case 4:
+			printf("Obrigado por utilizar o sistema!");
+			return 0;
+			
 			
 			default://caso o usuario digite qualquer outro numero fora do case
 			printf("Essa opção não esta disponivel\n");//retorna a info para o usuario
