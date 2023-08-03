@@ -129,57 +129,74 @@ int main()//codigo principal
 {
 	int opcao=0;//Definindo variaveis
 	int laco=1;//definindo uma variavel para um laco de repeticao infinito
+	char senhadigitada[]="a";
+	int comparacao;
 	
-	for(laco=1;laco=1;)//o valor de laco nunca vai mudar, portanto nunca vai sair do loop
+	printf("###Cartorio da EBAC###\n\n");
+	printf("Login de administrador!\n\nDigite a sua senha: ");
+	scanf("%s",senhadigitada);
+	
+	comparacao = strcmp(senhadigitada,"admin");
+	
+	if(comparacao==0)
 	{
-
-		system("cls");//Limpa a tela do programa
-		
-		
-		
-		setlocale(LC_ALL, "Portuguese");//Definindo a linguagem
 	
 	
-		printf("###Olá, seja bem vindo ao Cartório da EBAC###\n\n");//inicio do menu
-		printf("Escolha a opção desejada:\n\n");
-		printf("\t1- Registrar nomes\n");
-		printf("\t2- Consultar nomes\n");
-		printf("\t3- Deletar nomes\n");
-		printf("\t4- Sair do sistema\n\n");
-		printf("Opcao: " ); //final do menu
-	
-		scanf("%d", &opcao); //armazenando a escolha do usuario
-	
-		system("cls");//limpa a tela do programa
-		
-		
-		switch(opcao) //inicio da selecao/comeca o loop de switch case para verificar condicionais (no caso compara o valor da variavel "opcao" a 1 2 3 ou default.)
+		for(laco=1;laco=1;)//o valor de laco nunca vai mudar, portanto nunca vai sair do loop
 		{
-			case 1:
-			registro();//chama a funcao registro que esta fora do codigo principal
-			break;//para o loop de switchcase
+
+			system("cls");//Limpa a tela do programa
+		
+		
+		
+			setlocale(LC_ALL, "Portuguese");//Definindo a linguagem
+	
+		
+			printf("###Olá, seja bem vindo ao Cartório da EBAC###\n\n");//inicio do menu
+			printf("Escolha a opção desejada:\n\n");
+			printf("\t1- Registrar nomes\n");
+			printf("\t2- Consultar nomes\n");
+			printf("\t3- Deletar nomes\n");
+			printf("\t4- Sair do sistema\n\n");
+			printf("Opcao: " ); //final do menu
+	
+			scanf("%d", &opcao); //armazenando a escolha do usuario
+	
+			system("cls");//limpa a tela do programa
+		
+		
+			switch(opcao) //inicio da selecao/comeca o loop de switch case para verificar condicionais (no caso compara o valor da variavel "opcao" a 1 2 3 ou default.)
+			{
+				case 1:
+				registro();//chama a funcao registro que esta fora do codigo principal
+				break;//para o loop de switchcase
+				
 			
+				case 2:
+				consulta();//chama a funcao consulta que esta fora do codigo principal
+				break;//para o loop de switchcase
 			
-			case 2:
-			consulta();//chama a funcao consulta que esta fora do codigo principal
-			break;//para o loop de switchcase
-			
-			case 3:
-			deletar();//chama a funcao deletar que esta fora do codigo principal
-			break;//para o loop de switchcase
+				case 3:
+				deletar();//chama a funcao deletar que esta fora do codigo principal
+				break;//para o loop de switchcase
 					
 			
-			case 4:
-			printf("Obrigado por utilizar o sistema!");
-			return 0;
+				case 4:
+				printf("Obrigado por utilizar o sistema!");
+				return 0;
 			
 			
-			default://caso o usuario digite qualquer outro numero fora do case
-			printf("Essa opção não esta disponivel\n");//retorna a info para o usuario
-			system("pause");//pausa o sistema
-			break;//sai do loop de switchcase
-		}
-			
- 
+				default://caso o usuario digite qualquer outro numero fora do case
+				printf("Essa opção não esta disponivel\n");//retorna a info para o usuario
+				system("pause");//pausa o sistema
+				break;//sai do loop de switchcase
+			}
+		}			
 	} 
+	
+		else
+			printf("senha incorreta");
 }
+
+
+		
