@@ -71,7 +71,7 @@ int consulta()
 	char cpf[40]; // variavel da resposta do usuario para qual ele quer consultar
 	char conteudo[200];//conteudo do arquivo
 	
-	printf("Digite o CPF a ser consultado: ");//Coleta a informacao do usuario
+	printf("Digite o CPF a ser consultado: ");//Recebe o usuario a ser consultado
 	scanf("%s", cpf);//Escaneia a resposta do usuario e salva o valor da variavel CPF
 	
 	FILE *file;
@@ -136,12 +136,12 @@ int main()//codigo principal
 	printf("Login de administrador!\n\nDigite a sua senha: ");
 	scanf("%s",senhadigitada);
 	
-	comparacao = strcmp(senhadigitada,"admin");
+	comparacao = strcmp(senhadigitada,"admin");//cria uma variavel com a funcao strcmp para comparar 2 strings
 	
-	if(comparacao==0)
+	if(comparacao==0)//caso o valor da comparacao nao de diferenca ou seja == 0, entao prossegue com o codigo
 	{
 	
-	
+		system("cls");
 		for(laco=1;laco=1;)//o valor de laco nunca vai mudar, portanto nunca vai sair do loop
 		{
 
@@ -183,7 +183,7 @@ int main()//codigo principal
 			
 				case 4:
 				printf("Obrigado por utilizar o sistema!");
-				return 0;
+				return 0; //quebra o código para sair do sistema
 			
 			
 				default://caso o usuario digite qualquer outro numero fora do case
